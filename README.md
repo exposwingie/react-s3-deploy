@@ -10,6 +10,10 @@
  ```javascript
  deploy": "./deploy/staging.sh"
 ```
-
+## Usage
+Run this command for deploy
+```
+ yarn deploy 
+```
 
  
