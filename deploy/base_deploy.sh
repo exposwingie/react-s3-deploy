@@ -1,4 +1,4 @@
-BUCKET_NAME="serverless-app" # TODO: ENTER YOUR BUCKET NAME
+#!/bin/bash
 
 yarn build && \
 aws s3 rm s3://$BUCKET_NAME --recursive && \

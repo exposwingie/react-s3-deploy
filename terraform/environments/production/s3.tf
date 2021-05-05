@@ -1,9 +1,9 @@
 locals {
-  bucket_name_environment = "${var.bucket_name}-production"
+  full_bucket_name = "${var.bucket_name}-production"
 }
 
 resource "aws_s3_bucket" "react_bucket" {
-  bucket = locals.bucket_name_environment
+  bucket = locals.full_bucket_name
   acl    = "public-read"
 
   policy = <<POLICY
@@ -17,7 +17,7 @@ resource "aws_s3_bucket" "react_bucket" {
         "s3:GetObject"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::${locals.bucket_name_environment}/*",
+      "Resource": "arn:aws:s3:::${locals.full_bucket_name}/*",
       "Principal": "*"
     }
   ]

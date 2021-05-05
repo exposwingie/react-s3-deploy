@@ -19,6 +19,7 @@ module "staging" {
   bucket_name = var.bucket_name
 }
 
-# module "production" { # UNCOMMENT FOR PRODUCTION
+# TO-DO: Uncomment for production environment
+# module "production" {
 #   bucket_name = var.bucket_name
 # }
